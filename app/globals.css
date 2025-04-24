@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    /* #d27621 converted to HSL: 29 72% 48% */
+    --primary: 29 72% 48%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 29 72% 48%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 29 72% 48%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* #d27621 converted to HSL: 29 72% 48% */
+    --primary: 29 72% 48%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 29 72% 48%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 29 72% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  /* Primary button with burnt orange background */
+  .btn-primary {
+    background-color: #d27621;
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: #a85e1a;
+  }
+
+  /* Secondary button with dark background */
+  .btn-secondary {
+    @apply bg-brand-dark-300 hover:bg-brand-dark-200 text-white;
+  }
+
+  /* Outline button with burnt orange border */
+  .btn-outline {
+    border-color: #d27621;
+    color: #d27621;
+  }
+  .btn-outline:hover {
+    background-color: rgba(210, 118, 33, 0.1);
+  }
+
+  /* Card background */
+  .card-bg {
+    @apply bg-brand-dark-500 border-brand-dark-400;
+  }
+
+  /* Inner card element */
+  .card-inner {
+    @apply bg-brand-dark-400;
+  }
+
+  /* Input background */
+  .input-bg {
+    @apply bg-brand-dark-400 border-brand-gray-700;
+  }
+
+  /* Success badge */
+  .badge-success {
+    @apply bg-status-success-light/10 text-status-success border-status-success;
+  }
+
+  /* Warning badge */
+  .badge-warning {
+    @apply bg-status-warning-light/10 text-status-warning border-status-warning;
+  }
+
+  /* Error badge */
+  .badge-error {
+    @apply bg-status-error-light/10 text-status-error border-status-error;
+  }
+
+  /* Info badge */
+  .badge-info {
+    @apply bg-status-info-light/10 text-status-info border-status-info;
+  }
+
+  /* Primary badge */
+  .badge-primary {
+    background-color: rgba(210, 118, 33, 0.1);
+    color: #d27621;
+    border-color: #d27621;
+  }
+
+  /* Secondary badge */
+  .badge-secondary {
+    @apply bg-brand-gray-700/50 text-brand-gray-300 border-brand-gray-600;
+  }
+
+  /* Neutral badge */
+  .badge-neutral {
+    @apply bg-brand-gray-700 text-brand-gray-300 border-brand-gray-600;
+  }
+
+  /* Amber avatar */
+  .avatar-amber {
+    background-color: #d27621;
+    color: white;
+  }
+
+  /* Dark avatar */
+  .avatar-dark {
+    @apply bg-brand-dark-300 text-white;
+  }
+
+  /* Progress bar background */
+  .progress-bar-bg {
+    @apply bg-brand-dark-300;
+  }
+
+  /* Progress bar fill */
+  .progress-bar-fill {
+    background-color: #d27621;
+  }
+}
